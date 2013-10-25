@@ -17,12 +17,13 @@ body {
 	color: #fff;
 }
 .pantsInterface{
-	width: 50%; 
+	width: 920px; height: 425px; 
+	margin: 0 auto;
 	display: block;
 }
 .pantsNavigation {
 	position: relative;
-	height: 15em;
+	width: 460px; height: 425px;
 	display: block;
 	margin-bottom: 3em;
 	background: rgba(0,0,0,0.05);
@@ -67,7 +68,7 @@ body {
 
 .csstransforms .cn-wrapper {
 	position: absolute;
-	top: 100%;
+	top: 50%;
 	left: 50%;
 	z-index: 10;
 	margin-top: -13em;
@@ -195,6 +196,10 @@ body {
 	-moz-transform: rotate(-20deg) skew(60deg);
 	-ms-transform: rotate(-20deg) skew(60deg);
 	transform: rotate(-20deg) skew(60deg);
+}
+.csstransforms .opened-nav li:first-child a{
+	background: red;
+	background: -webkit-radial-gradient(transparent 35%, red 35%);
 }
 
 .csstransforms .opened-nav li:nth-child(2) {

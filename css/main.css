@@ -91,21 +91,24 @@ body {
 
 /* line 19, ../sass/_base.scss */
 .pantsInterface {
-  width: 50%;
+  width: 920px;
+  height: 425px;
+  margin: 0 auto;
   display: block;
 }
 
-/* line 23, ../sass/_base.scss */
+/* line 24, ../sass/_base.scss */
 .pantsNavigation {
   position: relative;
-  height: 15em;
+  width: 460px;
+  height: 425px;
   display: block;
   margin-bottom: 3em;
   background: rgba(0, 0, 0, 0.05);
   font-family: 'Lato', Arial, sans-serif;
 }
 
-/* line 32, ../sass/_base.scss */
+/* line 33, ../sass/_base.scss */
 .pantsNavigation > h2 {
   position: absolute;
   overflow: hidden;
@@ -120,7 +123,7 @@ body {
   cursor: default;
 }
 
-/* line 46, ../sass/_base.scss */
+/* line 47, ../sass/_base.scss */
 .cn-button {
   position: absolute;
   top: 50%;
@@ -145,10 +148,10 @@ body {
   -webkit-backface-visibility: hidden;
 }
 
-/* line 68, ../sass/_base.scss */
+/* line 69, ../sass/_base.scss */
 .csstransforms .cn-wrapper {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: 50%;
   z-index: 10;
   margin-top: -13em;
@@ -170,7 +173,7 @@ body {
 }
 
 /*cover to prevent extra space of anchors from being clickable*/
-/* line 92, ../sass/_base.scss */
+/* line 93, ../sass/_base.scss */
 .csstransforms .cn-wrapper:after {
   content: ".";
   display: block;
@@ -187,7 +190,7 @@ body {
   color: transparent;
 }
 
-/* line 108, ../sass/_base.scss */
+/* line 109, ../sass/_base.scss */
 .csstransforms .opened-nav {
   border-radius: 50%;
   opacity: 1;
@@ -201,7 +204,7 @@ body {
   pointer-events: auto;
 }
 
-/* line 121, ../sass/_base.scss */
+/* line 122, ../sass/_base.scss */
 .csstransforms .cn-wrapper li {
   position: absolute;
   top: 50%;
@@ -225,7 +228,7 @@ body {
   pointer-events: none;
 }
 
-/* line 144, ../sass/_base.scss */
+/* line 145, ../sass/_base.scss */
 .csstransforms .cn-wrapper li a {
   position: absolute;
   right: -7.25em;
@@ -252,7 +255,7 @@ body {
   pointer-events: auto;
 }
 
-/* line 170, ../sass/_base.scss */
+/* line 171, ../sass/_base.scss */
 .csstransforms .cn-wrapper li a span {
   position: relative;
   top: 1.8em;
@@ -262,7 +265,7 @@ body {
   text-transform: uppercase;
 }
 
-/* line 181, ../sass/_base.scss */
+/* line 182, ../sass/_base.scss */
 .csstransforms .cn-wrapper li a:hover,
 .csstransforms .cn-wrapper li a:active,
 .csstransforms .cn-wrapper li a:focus {
@@ -271,14 +274,14 @@ body {
   background: radial-gradient(transparent 35%, #449e6a 35%);
 }
 
-/* line 187, ../sass/_base.scss */
+/* line 188, ../sass/_base.scss */
 .csstransforms .opened-nav li {
   -webkit-transition: all .3s ease .3s;
   -moz-transition: all .3s ease .3s;
   transition: all .3s ease .3s;
 }
 
-/* line 193, ../sass/_base.scss */
+/* line 194, ../sass/_base.scss */
 .csstransforms .opened-nav li:first-child {
   -webkit-transform: rotate(-20deg) skew(60deg);
   -moz-transform: rotate(-20deg) skew(60deg);
@@ -287,6 +290,12 @@ body {
 }
 
 /* line 200, ../sass/_base.scss */
+.csstransforms .opened-nav li:first-child a {
+  background: red;
+  background: -webkit-radial-gradient(transparent 35%, red 35%);
+}
+
+/* line 205, ../sass/_base.scss */
 .csstransforms .opened-nav li:nth-child(2) {
   -webkit-transform: rotate(12deg) skew(60deg);
   -moz-transform: rotate(12deg) skew(60deg);
@@ -294,7 +303,7 @@ body {
   transform: rotate(12deg) skew(60deg);
 }
 
-/* line 207, ../sass/_base.scss */
+/* line 212, ../sass/_base.scss */
 .csstransforms .opened-nav li:nth-child(3) {
   -webkit-transform: rotate(44deg) skew(60deg);
   -moz-transform: rotate(44deg) skew(60deg);
@@ -302,7 +311,7 @@ body {
   transform: rotate(44deg) skew(60deg);
 }
 
-/* line 214, ../sass/_base.scss */
+/* line 219, ../sass/_base.scss */
 .csstransforms .opened-nav li:nth-child(4) {
   -webkit-transform: rotate(76deg) skew(60deg);
   -moz-transform: rotate(76deg) skew(60deg);
@@ -310,7 +319,7 @@ body {
   transform: rotate(76deg) skew(60deg);
 }
 
-/* line 221, ../sass/_base.scss */
+/* line 226, ../sass/_base.scss */
 .csstransforms .opened-nav li:nth-child(5) {
   -webkit-transform: rotate(108deg) skew(60deg);
   -moz-transform: rotate(108deg) skew(60deg);
@@ -318,7 +327,7 @@ body {
   transform: rotate(108deg) skew(60deg);
 }
 
-/* line 228, ../sass/_base.scss */
+/* line 233, ../sass/_base.scss */
 .csstransforms .opened-nav li:nth-child(6) {
   -webkit-transform: rotate(140deg) skew(60deg);
   -moz-transform: rotate(140deg) skew(60deg);
@@ -326,7 +335,7 @@ body {
   transform: rotate(140deg) skew(60deg);
 }
 
-/* line 235, ../sass/_base.scss */
+/* line 240, ../sass/_base.scss */
 .csstransforms .opened-nav li:nth-child(7) {
   -webkit-transform: rotate(172deg) skew(60deg);
   -moz-transform: rotate(172deg) skew(60deg);
@@ -334,7 +343,7 @@ body {
   transform: rotate(172deg) skew(60deg);
 }
 
-/* line 242, ../sass/_base.scss */
+/* line 247, ../sass/_base.scss */
 .no-csstransforms .cn-wrapper {
   overflow: hidden;
   margin: 10em auto;
@@ -342,12 +351,12 @@ body {
   text-align: center;
 }
 
-/* line 249, ../sass/_base.scss */
+/* line 254, ../sass/_base.scss */
 .no-csstransforms .cn-wrapper ul {
   display: inline-block;
 }
 
-/* line 253, ../sass/_base.scss */
+/* line 258, ../sass/_base.scss */
 .no-csstransforms .cn-wrapper li {
   float: left;
   width: 5em;
@@ -358,7 +367,7 @@ body {
   line-height: 5em;
 }
 
-/* line 263, ../sass/_base.scss */
+/* line 268, ../sass/_base.scss */
 .no-csstransforms .cn-wrapper li a {
   display: block;
   width: 100%;
@@ -367,26 +376,26 @@ body {
   text-decoration: none;
 }
 
-/* line 273, ../sass/_base.scss */
+/* line 278, ../sass/_base.scss */
 .no-csstransforms .cn-wrapper li a:hover,
 .no-csstransforms .cn-wrapper li a:active,
 .no-csstransforms .cn-wrapper li a:focus {
   background-color: #f8f8f8;
 }
 
-/* line 277, ../sass/_base.scss */
+/* line 282, ../sass/_base.scss */
 .no-csstransforms .cn-wrapper li.active a {
   background-color: #6F325C;
   color: #fff;
 }
 
-/* line 282, ../sass/_base.scss */
+/* line 287, ../sass/_base.scss */
 .no-csstransforms .cn-button {
   display: none;
 }
 
 @media only screen and (max-width: 620px) {
-  /* line 287, ../sass/_base.scss */
+  /* line 292, ../sass/_base.scss */
   .no-csstransforms li {
     width: 4em;
     height: 4em;
@@ -394,12 +403,12 @@ body {
   }
 }
 @media only screen and (max-width: 500px) {
-  /* line 295, ../sass/_base.scss */
+  /* line 300, ../sass/_base.scss */
   .no-ccstransforms .cn-wrapper {
     padding: .5em;
   }
 
-  /* line 299, ../sass/_base.scss */
+  /* line 304, ../sass/_base.scss */
   .no-csstransforms .cn-wrapper li {
     width: 4em;
     height: 4em;
@@ -408,18 +417,18 @@ body {
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 308, ../sass/_base.scss */
+  /* line 313, ../sass/_base.scss */
   .csstransforms .cn-wrapper {
     font-size: .68em;
   }
 
-  /* line 312, ../sass/_base.scss */
+  /* line 317, ../sass/_base.scss */
   .cn-button {
     font-size: 1em;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 318, ../sass/_base.scss */
+  /* line 323, ../sass/_base.scss */
   .no-csstransforms .cn-wrapper li {
     width: 100%;
     height: 3em;
