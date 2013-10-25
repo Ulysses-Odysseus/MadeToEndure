@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,150 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url("../font/WebFont.eot");
+  src: url("../font/WebFont.eot?#iefix") format("embedded-opentype"), url("../font/WebFont.woff") format("woff"), url("../font/WebFont.ttf") format("truetype"), url("../font/WebFont.svg#webfont") format("svg");
+}
+
+/* line 1, ../sass/_app.scss */
+body, html {
+  font-family: 'haymakerregular';
+}
+
+/* line 5, ../sass/_app.scss */
+.linear {
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -ms-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 13, ../sass/_app.scss */
+#container {
+  width: 920px;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  /* Landing Page */
+}
+/* line 20, ../sass/_app.scss */
+#container .landing {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: url("../img/landing920x425.jpg") no-repeat top left;
+  /* Video Overlay */
+  /* Exit Button */
+}
+/* line 25, ../sass/_app.scss */
+#container .landing ul {
+  width: 335px;
+  margin: 0;
+  padding: 235px 0 0 40px;
+}
+/* line 29, ../sass/_app.scss */
+#container .landing ul li {
+  margin: 0 0 19px 0;
+  padding: 0;
+}
+/* line 32, ../sass/_app.scss */
+#container .landing ul li a {
+  display: block;
+}
+/* line 39, ../sass/_app.scss */
+#container .landing .overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: url("../img/overlay-bg.png") repeat;
+  z-index: 1;
+  opacity: 0;
+}
+/* line 51, ../sass/_app.scss */
+#container .landing .overlay .video {
+  width: 690px;
+  height: 388px;
+  overflow: hidden;
+  margin: 31px;
+  float: right;
+}
+/* line 57, ../sass/_app.scss */
+#container .landing .overlay .video .frame {
+  margin-top: -65px;
+}
+/* line 63, ../sass/_app.scss */
+#container .landing .active {
+  display: block;
+  opacity: 1;
+}
+/* line 69, ../sass/_app.scss */
+#container .landing .exit {
+  position: absolute;
+  top: 31px;
+  left: 31px;
+  color: #e1d0a5;
+  background: black;
+  border-radius: 40px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  outline: none;
+  background: none;
+  z-index: 2;
+}
+/* line 82, ../sass/_app.scss */
+#container .landing .exit:hover {
+  cursor: pointer;
+  color: black;
+  background: #e1d0a5;
 }
