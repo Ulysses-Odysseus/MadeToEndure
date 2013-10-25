@@ -68,14 +68,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @font-face {
-  font-family: 'MyWebFont';
-  src: url("../font/WebFont.eot");
-  src: url("../font/WebFont.eot?#iefix") format("embedded-opentype"), url("../font/WebFont.woff") format("woff"), url("../font/WebFont.ttf") format("truetype"), url("../font/WebFont.svg#webfont") format("svg");
+  font-family: 'haymakerregular';
+  src: url("../font/haymaker-webfont.eot");
+  src: url("../font/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("../font/haymaker-webfont.woff") format("woff"), url("../font/haymaker-webfont.ttf") format("truetype"), url("../font/haymaker-webfont.svg#haymakerregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* line 1, ../sass/_app.scss */
 body, html {
-  font-family: 'haymakerregular';
+  font: 13px/18px regular "haymakerregular";
 }
 
 /* line 5, ../sass/_app.scss */
@@ -108,18 +110,26 @@ body, html {
 #container .landing ul {
   width: 335px;
   margin: 0;
-  padding: 235px 0 0 40px;
+  padding: 237px 0 0 40px;
 }
 /* line 29, ../sass/_app.scss */
 #container .landing ul li {
-  margin: 0 0 19px 0;
+  margin: 0 0 23px 0;
   padding: 0;
 }
 /* line 32, ../sass/_app.scss */
 #container .landing ul li a {
   display: block;
+  font-size: 1.8em;
+  color: white;
+  font-family: 'haymakerregular';
+  text-decoration: none;
 }
-/* line 39, ../sass/_app.scss */
+/* line 38, ../sass/_app.scss */
+#container .landing ul li a:hover {
+  color: #e1d0a5;
+}
+/* line 46, ../sass/_app.scss */
 #container .landing .overlay {
   display: none;
   position: absolute;
@@ -133,28 +143,29 @@ body, html {
   z-index: 1;
   opacity: 0;
 }
-/* line 51, ../sass/_app.scss */
-#container .landing .overlay .video {
+/* line 58, ../sass/_app.scss */
+#container .landing .overlay .theatre {
   width: 690px;
   height: 388px;
   overflow: hidden;
   margin: 31px;
   float: right;
 }
-/* line 57, ../sass/_app.scss */
-#container .landing .overlay .video .frame {
+/* line 64, ../sass/_app.scss */
+#container .landing .overlay .theatre .frame {
   margin-top: -65px;
 }
-/* line 63, ../sass/_app.scss */
+/* line 70, ../sass/_app.scss */
 #container .landing .active {
   display: block;
-  opacity: 1;
+  opacity: 1 !important;
 }
-/* line 69, ../sass/_app.scss */
+/* line 76, ../sass/_app.scss */
 #container .landing .exit {
   position: absolute;
   top: 31px;
   left: 31px;
+  font: 1.25em "haymakerregular";
   color: #e1d0a5;
   background: black;
   border-radius: 40px;
@@ -165,9 +176,7 @@ body, html {
   background: none;
   z-index: 2;
 }
-/* line 82, ../sass/_app.scss */
+/* line 90, ../sass/_app.scss */
 #container .landing .exit:hover {
   cursor: pointer;
-  color: black;
-  background: #e1d0a5;
 }

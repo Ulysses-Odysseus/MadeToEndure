@@ -1,5 +1,5 @@
 body,html{
-    font-family: 'haymakerregular';
+    font: 13px/18px regular 'haymakerregular';
 }
 
 .linear{
@@ -25,12 +25,19 @@ body,html{
         ul{
             width: 335px;
             margin: 0;
-            padding: 235px 0 0 40px;
+            padding: 237px 0 0 40px;
             li{
-                margin: 0 0 19px 0;
+                margin: 0 0 23px 0;
                 padding: 0;
                 a{
                     display: block;
+                    font-size: 1.8em;
+                    color: white;
+                    font-family: 'haymakerregular';
+                    text-decoration: none;
+                    &:hover{
+                        color: #e1d0a5;
+                    }
                 }
             }
         }
@@ -48,7 +55,7 @@ body,html{
             background: url('../img/overlay-bg.png') repeat;
             z-index: 1;
             opacity: 0;
-            .video{
+            .theatre{
                 width: 690px;
                 height: 388px;
                 overflow: hidden;
@@ -62,7 +69,7 @@ body,html{
 
         .active{
             display: block;
-            opacity: 1;
+            opacity: 1 !important;
         }
 
         /* Exit Button */
@@ -70,7 +77,8 @@ body,html{
             position: absolute;
             top: 31px;
             left: 31px;
-            color: #e1d0a5;;
+            font: 1.25em 'haymakerregular';
+            color: #e1d0a5;
             background: black;
             border-radius: 40px;
             border: none;
@@ -81,8 +89,6 @@ body,html{
             z-index: 2;
             &:hover{
                 cursor: pointer;
-                color: black;
-                background: #e1d0a5;
             }
         }
     }
