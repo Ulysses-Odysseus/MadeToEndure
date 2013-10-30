@@ -1,17 +1,22 @@
-(function($){
-    $('.feature, .exit').on('click', function (e) {
-        e.preventDefault();
-        var target = $(this).attr('class');
+function fadeIn(target) {
+    target.style.opacity = 1;
+    target.style.filter  = "alpha(opacity=100)";
 
-        if(target == 'feature'){
-            $('.overlay').addClass('active');
-        }
-        if(target == 'exit'){
-            // $('.frame').each(function(){
-            //     $(this).stopVideo();
-            // });
-            $('.overlay').removeClass('active');
-            console.log('video stopped');
-        }
-    });
-})(jQuery);
+}
+
+function load() {
+    var target = document.getElementById('container');
+    fadeIn(target);
+}
+
+function toggleVideo(scroll) {
+    var counter = '-450px';
+    var target  = document.getElementById('landing');
+
+    if(scroll){
+        target.style.marginTop = 0;
+    } else {
+        target.style.marginTop = counter;
+    }
+    return false;
+}

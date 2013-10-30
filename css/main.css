@@ -67,7 +67,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-<<<<<<< HEAD
 @font-face {
   font-family: 'haymakerregular';
   src: url("../font/haymaker-webfont.eot");
@@ -76,111 +75,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 1, ../sass/_app.scss */
-body, html {
-  font: 13px/18px regular "haymakerregular";
-}
-
-/* line 5, ../sass/_app.scss */
-.linear {
-  -webkit-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  -moz-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  -ms-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  -o-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
-}
-
-/* line 13, ../sass/_app.scss */
-#container {
-  width: 920px;
-  height: 450px;
-  margin: 0;
-  padding: 0;
-  /* Landing Page */
-}
-/* line 20, ../sass/_app.scss */
-#container .landing {
-  position: relative;
-  width: 100%;
-  height: 450px;
-  background: url("../img/landing920x425.jpg") no-repeat top left;
-  /* Video Overlay */
-  /* Exit Button */
-}
-/* line 25, ../sass/_app.scss */
-#container .landing ul {
-  width: 335px;
-  margin: 0;
-  padding: 237px 0 0 40px;
-}
-/* line 29, ../sass/_app.scss */
-#container .landing ul li {
-  margin: 0 0 23px 0;
-  padding: 0;
-}
-/* line 32, ../sass/_app.scss */
-#container .landing ul li a {
-  display: block;
-  font-size: 1.8em;
-  color: white;
-  font-family: 'haymakerregular';
-  text-decoration: none;
-}
-/* line 38, ../sass/_app.scss */
-#container .landing ul li a:hover {
-  color: #e1d0a5;
-}
-/* line 46, ../sass/_app.scss */
-#container .landing .overlay {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  background: url("../img/overlay-bg.png") repeat;
-  z-index: 1;
-  opacity: 0;
-}
-/* line 58, ../sass/_app.scss */
-#container .landing .overlay .theatre {
-  width: 690px;
-  height: 388px;
-  overflow: hidden;
-  margin: 31px;
-  float: right;
-}
-/* line 64, ../sass/_app.scss */
-#container .landing .overlay .theatre .frame {
-  margin-top: -65px;
-}
-/* line 70, ../sass/_app.scss */
-#container .landing .active {
-  display: block;
-  opacity: 1 !important;
-}
-/* line 76, ../sass/_app.scss */
-#container .landing .exit {
-  position: absolute;
-  top: 31px;
-  left: 31px;
-  font: 1.25em "haymakerregular";
-  color: #e1d0a5;
-  background: black;
-  border-radius: 40px;
-  border: none;
-  box-shadow: none;
-  text-shadow: none;
-  outline: none;
-  background: none;
-  z-index: 2;
-}
-/* line 90, ../sass/_app.scss */
-#container .landing .exit:hover {
-  cursor: pointer;
-=======
 /* line 1, ../sass/_base.scss */
 #container {
   width: 920px;
@@ -190,9 +84,9 @@ body, html {
 /* line 6, ../sass/_base.scss */
 .pantsContainer {
   width: 920px;
-  height: 425px;
+  height: 450px;
   display: block;
-  background: url("../img/denim920x425.jpg");
+  background: url("../img/denim920x450.jpg");
 }
 /* line 11, ../sass/_base.scss */
 .pantsContainer ul.washes {
@@ -348,5 +242,117 @@ body, html {
 /* line 133, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants8 a:hover {
   background: url("../img/pants8.png") no-repeat;
->>>>>>> origin/pants-nav
+}
+
+/* line 1, ../sass/_app.scss */
+body, html {
+  font: 13px/18px regular "haymakerregular";
+}
+
+/* line 5, ../sass/_app.scss */
+.linear {
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -ms-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 13, ../sass/_app.scss */
+.easeInOut {
+  -webkit-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  -moz-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  -ms-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  -o-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+}
+
+/* line 21, ../sass/_app.scss */
+#container {
+  width: 920px;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* Landing Page */
+}
+/* line 30, ../sass/_app.scss */
+#container #landing {
+  width: 100%;
+  height: 200%;
+  margin-top: -450px;
+  /* Video Overlay */
+}
+/* line 34, ../sass/_app.scss */
+#container #landing .menu {
+  width: 100%;
+  height: 50%;
+  background: url("../img/landing920x450.jpg") no-repeat top left;
+}
+/* line 38, ../sass/_app.scss */
+#container #landing .menu ul {
+  width: 335px;
+  margin: 0;
+  padding: 237px 0 0 40px;
+}
+/* line 42, ../sass/_app.scss */
+#container #landing .menu ul li {
+  margin: 0 0 23px 0;
+  padding: 0;
+}
+/* line 45, ../sass/_app.scss */
+#container #landing .menu ul li a {
+  display: block;
+  font-size: 1.8em;
+  color: white;
+  font-family: 'haymakerregular';
+  text-decoration: none;
+}
+/* line 51, ../sass/_app.scss */
+#container #landing .menu ul li a:hover {
+  color: #e1d0a5;
+}
+/* line 59, ../sass/_app.scss */
+#container #landing .overlay {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  background: url("../img/overlay-bg.png") repeat;
+  z-index: 1;
+  /* Exit Button */
+}
+/* line 67, ../sass/_app.scss */
+#container #landing .overlay .theatre {
+  width: 690px;
+  height: 388px;
+  overflow: hidden;
+  margin: 31px;
+  float: right;
+}
+/* line 73, ../sass/_app.scss */
+#container #landing .overlay .theatre .frame {
+  margin-top: -65px;
+}
+/* line 78, ../sass/_app.scss */
+#container #landing .overlay .exit {
+  position: absolute;
+  top: 31px;
+  left: 31px;
+  font: 1.25em "haymakerregular";
+  color: #e1d0a5;
+  background: black;
+  border-radius: 40px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  outline: none;
+  background: none;
+  z-index: 2;
+}
+/* line 92, ../sass/_app.scss */
+#container #landing .overlay .exit:hover {
+  cursor: pointer;
 }
