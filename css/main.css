@@ -67,13 +67,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 1, ../sass/_base.scss */
-#container {
-  width: 920px;
-  margin: 0 auto;
+@font-face {
+  font-family: 'haymakerregular';
+  src: url("../font/haymaker-webfont.eot");
+  src: url("../font/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("../font/haymaker-webfont.woff") format("woff"), url("../font/haymaker-webfont.ttf") format("truetype"), url("../font/haymaker-webfont.svg#haymakerregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* line 6, ../sass/_base.scss */
+/* line 1, ../sass/_base.scss */
 .pantsContainer {
   position: relative;
   width: 920px;
@@ -81,18 +83,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   background: url("../img/denim920x425.jpg");
 }
-/* line 12, ../sass/_base.scss */
+/* line 7, ../sass/_base.scss */
 .pantsContainer ul.washes {
   position: relative;
   width: 460px;
   height: 100%;
   display: block;
 }
-/* line 17, ../sass/_base.scss */
+/* line 12, ../sass/_base.scss */
 .pantsContainer ul.washes li {
   position: absolute;
 }
-/* line 20, ../sass/_base.scss */
+/* line 15, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants1 {
   width: 143px;
   height: 145px;
@@ -100,17 +102,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 203px;
   display: block;
 }
-/* line 25, ../sass/_base.scss */
+/* line 20, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants1 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 29, ../sass/_base.scss */
+/* line 24, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants1 a:hover {
   background: url("../img/pants.png") no-repeat;
 }
-/* line 34, ../sass/_base.scss */
+/* line 29, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants2 {
   width: 143px;
   height: 145px;
@@ -118,17 +120,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 273px;
   display: block;
 }
-/* line 39, ../sass/_base.scss */
+/* line 34, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants2 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 43, ../sass/_base.scss */
+/* line 38, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants2 a:hover {
   background: url("../img/pants2.png") no-repeat;
 }
-/* line 48, ../sass/_base.scss */
+/* line 43, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants3 {
   width: 139px;
   height: 140px;
@@ -136,17 +138,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 290px;
   display: block;
 }
-/* line 53, ../sass/_base.scss */
+/* line 48, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants3 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 57, ../sass/_base.scss */
+/* line 52, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants3 a:hover {
   background: url("../img/pants3.png") no-repeat;
 }
-/* line 62, ../sass/_base.scss */
+/* line 57, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants4 {
   width: 138px;
   height: 148px;
@@ -154,17 +156,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 256px;
   display: block;
 }
-/* line 67, ../sass/_base.scss */
+/* line 62, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants4 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 71, ../sass/_base.scss */
+/* line 66, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants4 a:hover {
   background: url("../img/pants4.png") no-repeat;
 }
-/* line 76, ../sass/_base.scss */
+/* line 71, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants5 {
   width: 139px;
   height: 139px;
@@ -172,17 +174,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 148px;
   display: block;
 }
-/* line 81, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants5 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 85, ../sass/_base.scss */
+/* line 80, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants5 a:hover {
   background: url("../img/pants5.png") no-repeat;
 }
-/* line 90, ../sass/_base.scss */
+/* line 85, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants6 {
   width: 165px;
   height: 148px;
@@ -190,17 +192,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 65px;
   display: block;
 }
-/* line 95, ../sass/_base.scss */
+/* line 90, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants6 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 99, ../sass/_base.scss */
+/* line 94, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants6 a:hover {
   background: url("../img/pants6.png") no-repeat;
 }
-/* line 104, ../sass/_base.scss */
+/* line 99, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants7 {
   width: 142px;
   height: 145px;
@@ -208,17 +210,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 61px;
   display: block;
 }
-/* line 109, ../sass/_base.scss */
+/* line 104, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants7 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 113, ../sass/_base.scss */
+/* line 108, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants7 a:hover {
   background: url("../img/pants7.png") no-repeat;
 }
-/* line 118, ../sass/_base.scss */
+/* line 113, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants8 {
   width: 145px;
   height: 161px;
@@ -226,17 +228,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 90px;
   display: block;
 }
-/* line 123, ../sass/_base.scss */
+/* line 118, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants8 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 127, ../sass/_base.scss */
+/* line 122, ../sass/_base.scss */
 .pantsContainer ul.washes li.pants8 a:hover {
   background: url("../img/pants8.png") no-repeat;
 }
-/* line 132, ../sass/_base.scss */
+/* line 127, ../sass/_base.scss */
 .pantsContainer ul.colors {
   position: absolute;
   top: 0;
@@ -245,11 +247,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 100%;
   display: block;
 }
-/* line 138, ../sass/_base.scss */
+/* line 133, ../sass/_base.scss */
 .pantsContainer ul.colors li {
   position: absolute;
 }
-/* line 141, ../sass/_base.scss */
+/* line 136, ../sass/_base.scss */
 .pantsContainer ul.colors li.color1 {
   width: 145px;
   height: 161px;
@@ -257,17 +259,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 168px;
   display: block;
 }
-/* line 146, ../sass/_base.scss */
+/* line 141, ../sass/_base.scss */
 .pantsContainer ul.colors li.color1 a {
   width: inherit;
   height: inherit;
   display: block;
+}
+/* line 145, ../sass/_base.scss */
+.pantsContainer ul.colors li.color1 a:hover {
+  background: url("../img/color1.png") no-repeat;
 }
 /* line 150, ../sass/_base.scss */
-.pantsContainer ul.colors li.color1 a:hover {
-  background: url("../img/color1.png") no-repeat;
-}
-/* line 155, ../sass/_base.scss */
 .pantsContainer ul.colors li.color1 {
   width: 145px;
   height: 161px;
@@ -275,13 +277,126 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 168px;
   display: block;
 }
-/* line 160, ../sass/_base.scss */
+/* line 155, ../sass/_base.scss */
 .pantsContainer ul.colors li.color1 a {
   width: inherit;
   height: inherit;
   display: block;
 }
-/* line 164, ../sass/_base.scss */
+/* line 159, ../sass/_base.scss */
 .pantsContainer ul.colors li.color1 a:hover {
   background: url("../img/color1.png") no-repeat;
+}
+
+/* line 1, ../sass/_app.scss */
+body, html {
+  font: 13px/18px regular 'haymakerregular';
+}
+
+/* line 5, ../sass/_app.scss */
+.linear {
+  -webkit-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -ms-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 500ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 13, ../sass/_app.scss */
+.easeInOut {
+  -webkit-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  -moz-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  -ms-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  -o-transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+  transition: all 500ms cubic-bezier(0.995, 0.01, 0, 1);
+}
+
+/* line 21, ../sass/_app.scss */
+#container {
+  width: 920px;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  /* Landing Page */
+}
+/* line 30, ../sass/_app.scss */
+#container #landing {
+  width: 100%;
+  height: 200%;
+  margin-top: -450px;
+  /* Video Overlay */
+}
+/* line 34, ../sass/_app.scss */
+#container #landing .menu {
+  width: 100%;
+  height: 50%;
+  background: url("../img/landing920x450.jpg") no-repeat top left;
+}
+/* line 38, ../sass/_app.scss */
+#container #landing .menu ul {
+  width: 335px;
+  margin: 0;
+  padding: 237px 0 0 40px;
+}
+/* line 42, ../sass/_app.scss */
+#container #landing .menu ul li {
+  margin: 0 0 23px 0;
+  padding: 0;
+}
+/* line 45, ../sass/_app.scss */
+#container #landing .menu ul li a {
+  display: block;
+  font-size: 1.8em;
+  color: white;
+  font-family: 'haymakerregular';
+  text-decoration: none;
+}
+/* line 51, ../sass/_app.scss */
+#container #landing .menu ul li a:hover {
+  color: #e1d0a5;
+}
+/* line 59, ../sass/_app.scss */
+#container #landing .overlay {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  background: url("../img/overlay-bg.png") repeat;
+  z-index: 1;
+  /* Exit Button */
+}
+/* line 67, ../sass/_app.scss */
+#container #landing .overlay .theatre {
+  width: 690px;
+  height: 388px;
+  overflow: hidden;
+  margin: 31px;
+  float: right;
+}
+/* line 73, ../sass/_app.scss */
+#container #landing .overlay .theatre .frame {
+  margin-top: -65px;
+}
+/* line 78, ../sass/_app.scss */
+#container #landing .overlay .exit {
+  position: absolute;
+  top: 31px;
+  left: 31px;
+  font: 1.25em 'haymakerregular';
+  color: #e1d0a5;
+  background: black;
+  border-radius: 40px;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  outline: none;
+  background: none;
+  z-index: 2;
+}
+/* line 92, ../sass/_app.scss */
+#container #landing .overlay .exit:hover {
+  cursor: pointer;
 }

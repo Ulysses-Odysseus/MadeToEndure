@@ -1,8 +1,3 @@
-#container{
-	width: 920px;
-	margin: 0 auto;
-}
-
 .pantsContainer{
 	position: relative;
 	width: 920px; height: 450px;
@@ -15,7 +10,7 @@
 		display: block;
 
 		li{ position: absolute;}
-		
+
 		// Pants 1
 		li.pants1{
 			width: 143px; height: 145px;
@@ -29,7 +24,7 @@
 		li.pants1 a:hover{
 			background: url('../img/pants.png') no-repeat;
 		}
-		
+
 		// Pants 2
 		li.pants2{
 			width: 143px; height: 145px;
