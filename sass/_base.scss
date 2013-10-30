@@ -4,14 +4,16 @@
 }
 
 .pantsContainer{
-	width: 920px; height: 425px;
+	position: relative;
+	width: 920px; height: 450px;
 	display: block;
 	background: url('../img/denim920x425.jpg');
-
+	
 	ul.washes{
 		position: relative;
 		width: 460px; height: 100%;
 		display: block;
+
 		li{ position: absolute;}
 		
 		// Pants 1
@@ -23,7 +25,6 @@
 		li.pants1 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: red;
 		}
 		li.pants1 a:hover{
 			background: url('../img/pants.png') no-repeat;
@@ -38,7 +39,6 @@
 		li.pants2 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: green;
 		}
 		li.pants2 a:hover{
 			background: url('../img/pants2.png') no-repeat;
@@ -53,7 +53,6 @@
 		li.pants3 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: yellow;
 		}
 		li.pants3 a:hover{
 			background: url('../img/pants3.png') no-repeat;
@@ -68,7 +67,6 @@
 		li.pants4 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: yellow;
 		}
 		li.pants4 a:hover{
 			background: url('../img/pants4.png') no-repeat;
@@ -83,7 +81,6 @@
 		li.pants5 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: purple;
 		}
 		li.pants5 a:hover{
 			background: url('../img/pants5.png') no-repeat;
@@ -98,7 +95,6 @@
 		li.pants6 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: purple;
 		}
 		li.pants6 a:hover{
 			background: url('../img/pants6.png') no-repeat;
@@ -113,7 +109,6 @@
 		li.pants7 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: purple;
 		}
 		li.pants7 a:hover{
 			background: url('../img/pants7.png') no-repeat;
@@ -128,10 +123,46 @@
 		li.pants8 a{
 			width: inherit;	height: inherit;
 			display: block;
-			// background: purple;
 		}
 		li.pants8 a:hover{
 			background: url('../img/pants8.png') no-repeat;
+		}
+	}
+
+	ul.colors{
+		position: absolute;
+		top: 0; right: 0;
+		width: 460px; height: 100%;
+		display: block;
+
+		li{ position: absolute;}
+		
+		// Pants Color 1
+		li.color1{
+			width: 145px; height: 161px;
+			top: 27px; left: 168px;
+			display: block;
+		}
+		li.color1 a{
+			width: inherit;	height: inherit;
+			display: block;
+		}
+		li.color1 a:hover{
+			background: url('../img/color1.png') no-repeat;
+		}
+
+		// Pants Color 2
+		li.color1{
+			width: 145px; height: 161px;
+			top: 27px; left: 168px;
+			display: block;
+		}
+		li.color1 a{
+			width: inherit;	height: inherit;
+			display: block;
+		}
+		li.color1 a:hover{
+			background: url('../img/color1.png') no-repeat;
 		}
 	}
 }
