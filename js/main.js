@@ -11,33 +11,33 @@ function fadeOut(target) {
 function pageLoad() {
     var target = document.getElementById('container');
     fadeIn(target);
-    return false;
 }
 
-var scroll = true;
-
-function toggleVideo() {
-    var travel = '-450px';
+function slide(position) {
+    var travel = (450 * position) + 'px';
     var target = document.getElementById('landing');
+    //Slide that shizz
+    target.style.marginTop = travel;
 
-    if(scroll){
-        target.style.marginTop = 0;
-    } else {
-        target.style.marginTop = travel;
-    }
-    scroll = !scroll;
-    return false;
+    // Pause youtube video when closing div
+    // var iframe = document.getElementById('frame').contentWindow;
+    // iframe.pauseVideo();
 }
 
 $(document).ready( function () {
-    $('.load').on('click', function (e) {
+    //Remove click events
+    $('.nav li').on('click', 'a', function (e) {
         e.preventDefault();
+    });
 
+    //Load the fit guide
+    $('.load').on('click', function () {
         var link   = $(this).attr('href');
         var target = document.getElementById('container');
 
         fadeOut(target);
         $('#container').load(link, function() {
+            $(this).css('height', '600px');
             fadeIn(target);
         });
     });

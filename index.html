@@ -32,32 +32,60 @@
 
             <!-- Video Overlay
             ---------------------->
-            <div class="overlay">
+            <div class="overlay block">
                 <figure class="theatre">
-                    <object class="frame" width="690" height="518">
+                    <!-- <object class="frame" width="690" height="518">
                         <param name="movie" value="http://www.youtube.com/v/P9S1dn9_0_8?hl=en_US&amp;version=3&amp;rel=0&enablejsapi=1"></param>
                         <param name="allowFullScreen" value="true"></param>
                         <param name="allowscriptaccess" value="always"></param>
                         <embed class="frame" src="http://www.youtube.com/v/P9S1dn9_0_8?hl=en_US&amp;version=3&amp;rel=0&enablejsapi=1" type="application/x-shockwave-flash" width="690" height="518" allowscriptaccess="always" allowfullscreen="true"></embed>
-                    </object>
+                    </object> -->
+                    <iframe id="frame" width="690" height="518" src="//www.youtube.com/embed/P9S1dn9_0_8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                 </figure>
                 <!-- Exit -->
-                <button class="exit" onclick="toggleVideo()">&larr;&nbsp;MENU</button>
-            </div> <!-- END: Video Overlay -->
+                <button class="exit" onclick="slide(-1)">&larr;&nbsp;MENU</button>
+            </div> <!-- End: Video Overlay -->
 
             <!-- Main Nav
             ---------------------->
             <nav class="menu">
                 <ul class="nav">
-                    <li><a href="#" title="" onclick="toggleVideo()">CHAD TIM TIM AT WORK</a></li>
+                    <li><a href="#" title="" onclick="slide(0)">CHAD TIM TIM AT WORK</a></li>
                     <li><a href="#" title="">GO BEHIND THE SEAMS</a></li>
                     <li><a class="load" href="guide.html" title="">VIEW DENIM FIT GUIDE</a></li>
-                    <li><a class="load" href="filters.html" title="">SHOP WASHES & COLORS</a></li>
+                    <li><a href="#" title="" onclick="slide(-2)">SHOP WASHES & COLORS</a></li>
                 </ul>
-            </nav> <!-- END: Main Nav -->
+            </nav> <!-- End: Main Nav -->
 
-        </div>
-    </div> <!-- END: Container -->
+            <!-- Pants Container
+            ---------------------->
+            <div class="pantsContainer block">
+                <button class="exit" onclick="slide(-1)">&larr;&nbsp;MENU</button>
+                <ul class="washes">
+                    <span class="textPantsNav textWashes"><span class="arrow">&raquo;</span>Washes<span class="arrow">&laquo;</span></span>
+                    <li class="pants1"><a href="#"><span></span></a></li>
+                    <li class="pants2"><a href="#"><span></span></a></li>
+                    <li class="pants3"><a href="#"><span></span></a></li>
+                    <li class="pants4"><a href="#"><span></span></a></li>
+                    <li class="pants5"><a href="#"><span></span></a></li>
+                    <li class="pants6"><a href="#"><span></span></a></li>
+                    <li class="pants7"><a href="#"><span></span></a></li>
+                    <li class="pants8"><a href="#"><span></span></a></li>
+                </ul>
+                <ul class="colors">
+                    <span class="textPantsNav textColor"><span class="arrow">&raquo;</span>Colors<span class="arrow">&laquo;</span></span>
+                    <li class="color1"><a href=""></a></li>
+                    <li class="color2"><a href=""></a></li>
+                    <li class="color3"><a href=""></a></li>
+                    <li class="color4"><a href=""></a></li>
+                    <li class="color5"><a href=""></a></li>
+                    <li class="color6"><a href=""></a></li>
+                    <li class="color7"><a href=""></a></li>
+                    <li class="color8"><a href=""></a></li>
+                </ul>
+            </div> <!-- End: Pants Container -->
 
+        </div> <!-- End: Landing -->
+    </div> <!-- End: Container -->
 </body>
 </html>

@@ -55,25 +55,14 @@ body,html{
                 }
             }
         }
-        /* Video Overlay */
-        .overlay{
+
+        .block{
             position: relative;
             width: 100%;
             height: 50%;
             margin: 0;
             padding: 0;
-            background: url('../img/overlay-bg.png') repeat;
-            z-index: 1;
-            .theatre{
-                width: 690px;
-                height: 388px;
-                overflow: hidden;
-                margin: 31px;
-                float: right;
-                .frame{
-                    margin-top: -65px;
-                }
-            }
+
             /* Button */
             .exit{
                 position: absolute;
@@ -91,6 +80,22 @@ body,html{
                 z-index: 2;
                 &:hover{
                     cursor: pointer;
+                }
+            }
+        }
+
+        /* Video Overlay */
+        .overlay{
+            background: url('../img/overlay-bg.png') repeat;
+            z-index: 1;
+            .theatre{
+                width: 690px;
+                height: 388px;
+                overflow: hidden;
+                margin: 31px;
+                float: right;
+                #frame{
+                    margin-top: -65px;
                 }
             }
         }
