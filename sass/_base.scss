@@ -1,13 +1,53 @@
+#container{
+
+	/* Button */
+    .exit{
+        position: absolute;
+        top: 10px; left: 10px;
+        font: 1.25em 'haymakerregular';
+        color: #e1d0a5;
+        background: black;
+        border-radius: 40px;
+        border: none;
+        box-shadow: none;
+        text-shadow: none;
+        outline: none;
+        background: none;
+        z-index: 2;
+        &:hover{
+            cursor: pointer;
+            color: #ffffff;
+        }
+    }
+}
+
 .pantsContainer{
 	position: relative;
 	width: 920px; height: 450px;
 	display: block;
 	background: url('../img/denim920x450.jpg');
 
+	ul{
+		.textPantsNav{
+			position: absolute;
+			top: 50%;
+			color: #ffffff;
+			font-size: 32px;
+			.arrow{
+				font-family: arial;
+				margin: 0 10px;
+			}
+		}
+
+	}
+
 	ul.washes{
 		position: relative;
 		width: 460px; height: 100%;
 		display: block;
+
+		// Copy
+		.textWashes{left: 135px;}
 
 		li{
 			position: absolute;
@@ -116,6 +156,10 @@
 		li{
 			position: absolute;
 			display: block;
+			//Copy
+			.textColor{
+				left: 110px;
+			}
 			a{
 				width: inherit;	height: inherit;
 				display: block;
