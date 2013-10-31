@@ -1,20 +1,15 @@
-#container{
-	width: 920px;
-	background: red;
-}
-
 .pantsContainer{
 	position: relative;
 	width: 920px; height: 450px;
 	display: block;
 	background: url('../img/denim920x450.jpg');
-	
+
 	ul.washes{
 		position: relative;
 		width: 460px; height: 100%;
 		display: block;
 
-		li{ 
+		li{
 			position: absolute;
 			display: block;
 			a{
@@ -73,7 +68,7 @@
 			top: 270px; left: 148px;
 			a{
 				&:hover{
-					background: url('../img/pants.png5') no-repeat;
+					background: url('../img/pants5.png') no-repeat;
 				}
 			}
 		}
@@ -118,7 +113,7 @@
 		width: 460px; height: 100%;
 		display: block;
 
-		li{ 
+		li{
 			position: absolute;
 			display: block;
 			a{
@@ -126,7 +121,7 @@
 				display: block;
 			}
 		}
-		
+
 		// Pants Color 1
 		li.color1{
 			width: 145px; height: 161px;
