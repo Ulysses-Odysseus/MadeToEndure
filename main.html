@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Page Needs
-    ================================================== -->
+    <!-- Basic Page Needs -->
     <meta charset="utf-8"/>
     <meta name="description" content="">
     <meta name="author" content="FatCat">
 
     <title>Element - Made to Endure</title>
 
-    <!-- Mobile Metas
-    ================================================== -->
+    <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/main.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://elementskateboards.com/micro/2013/denim-fall-13/made-to-endure/css/main.css">
 
-    <!-- Javascript
-    ================================================== -->
+    <!-- JS Dependencies -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>!window.jQuery && document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
+    <script>!window.jQuery && document.write('<script src="http://elementskateboards.com/micro/2013/denim-fall-13/made-to-endure/js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="http://www.youtube.com/player_api"></script>
 </head>
 <body onload="pageLoad()">
 
     <div id="title">
-        <a class="load" href="main.html" target="_self">&larr;&nbsp;BACK</a>
+        <a class="load" href="http://elementskateboards.com/micro/2013/denim-fall-13/made-to-endure/main.html" target="_self" title="Back">&larr;&nbsp;BACK</a>
     </div>
 
     <!-- Container
     ================================================== -->
     <div id="container" class="show linear">
-
         <div id="landing" class="easeInOut">
 
             <!-- Video Overlay
@@ -43,12 +38,11 @@
                     <ul>
                         <li><button class="vid1" onclick="swapVid(1)">Tim Tim At Work</button></li>
                         <li><button class="vid2" onclick="swapVid(0)">Behind the Seams</button></li>
-                        <li><button onclick="slide(0, -1)">SHOP<br />DENIM</button></li>
+                        <li><button onclick="slide(0,-1)">SHOP<br />DENIM</button></li>
                         <li><a class="load" href="#" title="Fit Guide">FIT<br />GUIDE</a></li>
                     </ul>
                 </div>
-                <figure id="vid1" class="theatre">
-                    <iframe id="frame" class="linear" width="800" height="450" src="" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
+                <figure id="player" class="theatre">
                 </figure>
             </div> <!-- End: Video Overlay -->
 
@@ -82,14 +76,14 @@
                 </ul>
                 <ul class="colors">
                     <span class="textPantsNav textColor"><span class="arrow">&raquo;</span>Colors<span class="arrow">&laquo;</span></span>
-                    <li class="color1"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=blackout"></a></li>
-                    <li class="color2"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=charcoal"></a></li>
-                    <li class="color3"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=camel"></a></li>
-                    <li class="color4"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=khaki"></a></li>
-                    <li class="color5"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr="></a></li>
-                    <li class="color6"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr="></a></li>
-                    <li class="color7"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=dark_gray"></a></li>
-                    <li class="color8"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr="></a></li>
+                    <li class="color1"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=blackout"  target="_top"></a></li>
+                    <li class="color2"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=charcoal"  target="_top"></a></li>
+                    <li class="color3"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=camel"  target="_top"></a></li>
+                    <li class="color4"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=khaki"  target="_top"></a></li>
+                    <li class="color5"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=brick,mahogony"  target="_top"></a></li>
+                    <li class="color6"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=gold_brown"  target="_top"></a></li>
+                    <li class="color7"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=dark_gray"  target="_top"></a></li>
+                    <li class="color8"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=army,surplus"  target="_top"></a></li>
                 </ul>
             </div> <!-- End: Pants Container -->
         </div> <!-- End: Swatches -->
@@ -97,7 +91,17 @@
     </div> <!-- End: Container -->
 
     <div id="loadContainer" class="linear">
-        <iframe src="./denim-us/index.php" scrolling="no" frameborder="no" width="920" height="547" allowtransparency="yes"></iframe>
+        <iframe src="http://elementskateboards.com/micro/2013/denim-fall-13/made-to-endure/denim-us/index.php" scrolling="no" frameborder="no" width="920" height="547" allowtransparency="yes"></iframe>
     </div>
+
+    <!-- Javascript -->
+    <script src="http://elementskateboards.com/micro/2013/denim-fall-13/made-to-endure/js/main.min.js"></script>
+    <script>
+        $(document).ready( function () {
+          $('body').on('click', function () {
+            parent.$('body').trigger('resizeIframe', $('body').height());
+          });
+        });
+    </script>
 </body>
 </html>

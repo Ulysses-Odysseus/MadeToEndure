@@ -1,45 +1,55 @@
-function fadeIn(target) {
-    target.style.opacity = 1;
-    target.style.filter  = "alpha(opacity=100)";
+var player;
+var slideTarget = document.getElementById('landing');
+var loadTarget  = document.getElementById('container');
+
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('player', {
+    width: '800',
+    height: '450',
+    videoId: 'bAlZMspFIRQ',
+    showinfo: '0',
+    autohide: '1'
+  });
 }
 
-function fadeOut(target) {
-    target.style.opacity = 0;
-    target.style.filter  = "alpha(opacity=0)";
+
+function fadeIn(fadeInTarget) {
+  fadeInTarget.style.opacity = 1;
+  fadeInTarget.style.filter  = "alpha(opacity=100)";
 }
+
+
+function fadeOut(fadeOutTarget) {
+  fadeOutTarget.style.opacity = 0;
+  fadeOutTarget.style.filter  = "alpha(opacity=0)";
+}
+
 
 function pageLoad() {
-    var target = document.getElementById('container');
-    fadeIn(target);
+  fadeIn(loadTarget);
 }
+
 
 function swapVid(bool) {
-    var frame = document.getElementById('frame');
-
-    fadeOut(frame);
-    setTimeout( function () {
-        if(bool) {
-            frame.src = "http://www.youtube.com/embed/P9S1dn9_0_8?showinfo=0&amp;autohide=1";
-        } else {
-            frame.src = "http://www.youtube.com/embed/z0p6OXS30Gw?showinfo=0&amp;autohide=1";
-        }
-    }, 400);
-    setTimeout( function () {
-        fadeIn(frame);
-    }, 700);
-    clearTimeout();
+  if(bool) {
+    playerId = 'bAlZMspFIRQ';
+  } else {
+    playerId = 'OHo2_YWfJXc';
+  }
+  player.loadVideoById(playerId);
 }
+
 
 function slide(dir, position) {
-    var target = document.getElementById('landing');
-
-    //Slide that shizz
-    if(dir)  target.style.marginTop  = (450 * position) + 'px';
-    if(!dir) target.style.marginLeft = (920 * position) + 'px';
+  player.pauseVideo();
+  //Slide that shizz
+  if(dir)  slideTarget.style.marginTop  = (450 * position) + 'px';
+  if(!dir) slideTarget.style.marginLeft = (920 * position) + 'px';
 }
 
+
 $(document).ready( function () {
-    var bool = true;
+    var loadLandingFrame = true;
 
     $('nav li, .load').click( function (e) {
         e.preventDefault();
@@ -47,13 +57,14 @@ $(document).ready( function () {
 
     // Load the fit guide
     $('.load').on('click', function () {
-        if(bool) {
-            $('#container').removeClass('show');
-            $('#title, #loadContainer').addClass('show');
-        } else {
-            $('#title, #loadContainer').removeClass('show');
-            $('#container').addClass('show');
-        }
-        bool = !bool;
+      player.pauseVideo();
+      if(loadLandingFrame) {
+          $('#container').removeClass('show');
+          $('#title, #loadContainer').addClass('show');
+      } else {
+          $('#title, #loadContainer').removeClass('show');
+          $('#container').addClass('show');
+      }
+      loadLandingFrame = !loadLandingFrame;
     });
 });
