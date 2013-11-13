@@ -13,32 +13,47 @@ function pageLoad() {
     fadeIn(target);
 }
 
-function slide(position) {
-    var travel = (450 * position) + 'px';
-    var target = document.getElementById('landing');
-    //Slide that shizz
-    target.style.marginTop = travel;
+function swapVid(bool) {
+    var frame = document.getElementById('frame');
 
-    // Pause youtube video when closing div
-    // var iframe = document.getElementById('frame').contentWindow;
-    // iframe.pauseVideo();
+    fadeOut(frame);
+    setTimeout( function () {
+        if(bool) {
+            frame.src = "http://www.youtube.com/embed/P9S1dn9_0_8?showinfo=0&amp;autohide=1";
+        } else {
+            frame.src = "http://www.youtube.com/embed/z0p6OXS30Gw?showinfo=0&amp;autohide=1";
+        }
+    }, 400);
+    setTimeout( function () {
+        fadeIn(frame);
+    }, 700);
+    clearTimeout();
+}
+
+function slide(dir, position) {
+    var target = document.getElementById('landing');
+
+    //Slide that shizz
+    if(dir)  target.style.marginTop  = (450 * position) + 'px';
+    if(!dir) target.style.marginLeft = (920 * position) + 'px';
 }
 
 $(document).ready( function () {
-    //Remove click events
-    $('.nav li').on('click', 'a', function (e) {
+    var bool = true;
+
+    $('nav li, .load').click( function (e) {
         e.preventDefault();
     });
 
-    //Load the fit guide
+    // Load the fit guide
     $('.load').on('click', function () {
-        var link   = $(this).attr('href');
-        var target = document.getElementById('container');
-
-        fadeOut(target);
-        $('#container').load(link, function() {
-            $(this).css('height', '600px');
-            fadeIn(target);
-        });
+        if(bool) {
+            $('#container').removeClass('show');
+            $('#title, #loadContainer').addClass('show');
+        } else {
+            $('#title, #loadContainer').removeClass('show');
+            $('#container').addClass('show');
+        }
+        bool = !bool;
     });
 });

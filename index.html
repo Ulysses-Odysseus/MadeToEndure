@@ -25,67 +25,79 @@
 </head>
 <body onload="pageLoad()">
 
+    <div id="title">
+        <a class="load" href="main.html" target="_self">&larr;&nbsp;BACK</a>
+    </div>
+
     <!-- Container
     ================================================== -->
-    <div id="container" class="linear">
+    <div id="container" class="show linear">
+
         <div id="landing" class="easeInOut">
 
             <!-- Video Overlay
             ---------------------->
             <div class="overlay block">
-                <figure class="theatre">
-                    <!-- <object class="frame" width="690" height="518">
-                        <param name="movie" value="http://www.youtube.com/v/P9S1dn9_0_8?hl=en_US&amp;version=3&amp;rel=0&enablejsapi=1"></param>
-                        <param name="allowFullScreen" value="true"></param>
-                        <param name="allowscriptaccess" value="always"></param>
-                        <embed class="frame" src="http://www.youtube.com/v/P9S1dn9_0_8?hl=en_US&amp;version=3&amp;rel=0&enablejsapi=1" type="application/x-shockwave-flash" width="690" height="518" allowscriptaccess="always" allowfullscreen="true"></embed>
-                    </object> -->
-                    <iframe id="frame" width="690" height="518" src="//www.youtube.com/embed/P9S1dn9_0_8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                <div class="left">
+                    <button class="close btn" onclick="slide(1, -1)"><span>&times;</span>MENU</button>
+                    <ul>
+                        <li><button class="vid1" onclick="swapVid(1)">Tim Tim At Work</button></li>
+                        <li><button class="vid2" onclick="swapVid(0)">Behind the Seams</button></li>
+                        <li><button onclick="slide(0, -1)">SHOP<br />DENIM</button></li>
+                        <li><a class="load" href="iframe.html" title="Fit Guide">FIT<br />GUIDE</a></li>
+                    </ul>
+                </div>
+                <figure id="vid1" class="theatre">
+                    <iframe id="frame" class="linear" width="800" height="450" src="" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
                 </figure>
-                <!-- Exit -->
-                <button class="exit" onclick="slide(-1)">&larr;&nbsp;MENU</button>
             </div> <!-- End: Video Overlay -->
 
             <!-- Main Nav
             ---------------------->
             <nav class="menu">
                 <ul class="nav">
-                    <li><a href="#" title="" onclick="slide(0)">CHAD TIM TIM AT WORK</a></li>
-                    <li><a href="#" title="">GO BEHIND THE SEAMS</a></li>
-                    <li><a class="load" href="guide.html" title="">VIEW DENIM FIT GUIDE</a></li>
-                    <li><a href="#" title="" onclick="slide(-2)">SHOP WASHES & COLORS</a></li>
+                    <li><a class="slide" href="#" title="Chad Tim Tim At Work" onclick="slide(1,0),swapVid(1)">CHAD TIM TIM AT WORK</a></li>
+                    <li><a class="slide" href="#" title="Behind the Scenes" onclick="slide(1,0),swapVid(0)">GO BEHIND THE SEAMS</a></li>
+                    <li><a class="load" href="iframe.html" title="Fit Guide">VIEW DENIM FIT GUIDE</a></li>
+                    <li><a class="slide" href="#" title="Swatches & Colors" onclick="slide(0,-1)">SHOP WASHES & COLORS</a></li>
                 </ul>
             </nav> <!-- End: Main Nav -->
+        </div> <!-- End: Landing -->
 
+        <div id="swatches">
             <!-- Pants Container
             ---------------------->
             <div class="pantsContainer block">
-                <button class="exit" onclick="slide(-1)">&larr;&nbsp;MENU</button>
+                <button class="exit" onclick="slide(0, 0)">&larr;&nbsp;BACK</button>
                 <ul class="washes">
                     <span class="textPantsNav textWashes"><span class="arrow">&raquo;</span>Washes<span class="arrow">&laquo;</span></span>
-                    <li class="pants1"><a href="#"><span></span></a></li>
-                    <li class="pants2"><a href="#"><span></span></a></li>
-                    <li class="pants3"><a href="#"><span></span></a></li>
-                    <li class="pants4"><a href="#"><span></span></a></li>
-                    <li class="pants5"><a href="#"><span></span></a></li>
-                    <li class="pants6"><a href="#"><span></span></a></li>
-                    <li class="pants7"><a href="#"><span></span></a></li>
-                    <li class="pants8"><a href="#"><span></span></a></li>
+                    <li class="pants1"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=darkstone_wash" target="_top"><span></span></a></li>
+                    <li class="pants2"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=5_year_resin,haggard,sand_wash" target="_top"><span></span></a></li>
+                    <li class="pants3"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=cshadow_black" target="_top"><span></span></a></li>
+                    <li class="pants4"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=shadow_black" target="_top"><span></span></a></li>
+                    <li class="pants5"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=black_rinse,dark_rinse" target="_top"><span></span></a></li>
+                    <li class="pants6"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=black_rinse,dark_rinse" target="_top"><span></span></a></li>
+                    <li class="pants7"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=black_rinse,dark_rinse" target="_top"><span></span></a></li>
+                    <li class="pants8"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=black_rinse,dark_rinse" target="_top"><span></span></a></li>
                 </ul>
                 <ul class="colors">
                     <span class="textPantsNav textColor"><span class="arrow">&raquo;</span>Colors<span class="arrow">&laquo;</span></span>
-                    <li class="color1"><a href=""></a></li>
-                    <li class="color2"><a href=""></a></li>
-                    <li class="color3"><a href=""></a></li>
-                    <li class="color4"><a href=""></a></li>
-                    <li class="color5"><a href=""></a></li>
-                    <li class="color6"><a href=""></a></li>
-                    <li class="color7"><a href=""></a></li>
-                    <li class="color8"><a href=""></a></li>
+                    <li class="color1"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=blackout"></a></li>
+                    <li class="color2"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=charcoal"></a></li>
+                    <li class="color3"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=camel"></a></li>
+                    <li class="color4"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=khaki"></a></li>
+                    <li class="color5"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr="></a></li>
+                    <li class="color6"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr="></a></li>
+                    <li class="color7"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr=dark_gray"></a></li>
+                    <li class="color8"><a href="http://us.shop.elementbrand.com/w/mens/denim-pants#clr="></a></li>
                 </ul>
             </div> <!-- End: Pants Container -->
+        </div> <!-- End: Swatches -->
 
-        </div> <!-- End: Landing -->
     </div> <!-- End: Container -->
+
+    <div id="loadContainer" class="linear">
+        <iframe src="./denim-us/index.php" scrolling="no" frameborder="no" width="920" height="547" allowtransparency="yes"></iframe>
+    </div>
 </body>
 </html>

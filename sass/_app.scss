@@ -2,6 +2,30 @@ body,html{
     font: 13px/18px regular 'haymakerregular';
 }
 
+a{
+    font-family: 'haymakerregular';
+}
+
+/* Button */
+.exit,
+button{
+    font-family: 'haymakerregular';
+    margin: 0;
+    padding: 0;
+    color: #e1d0a5;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    z-index: 2;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+/* Transitions */
 .linear{
     -webkit-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
        -moz-transition: all 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750);
@@ -18,18 +42,59 @@ body,html{
             transition: all 500ms cubic-bezier(0.995, 0.010, 0.000, 1.000);
 }
 
+/* Toggle */
+.show{
+    display: block!important;
+}
+
+#title {
+    width:920px;
+    height:63px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: #f2f2f2;
+    display: none;
+     a {
+        text-indent: 25px;
+        color: black;
+        display: block;
+        height: 53px;
+        font-size: 18px;
+        line-height: 65px;
+        padding: 0;
+        text-decoration: none;
+        font-family: haymakerregular;
+        &:hover{
+            color: #e1d0a5;
+        }
+    }
+}
+
+#loadContainer,
+#container{
+    display: none;
+}
+
+#loadContainer{
+    width: 920px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
 #container{
     width: 920px;
     height: 450px;
     margin: 0;
     padding: 0;
-    opacity: 0;
     overflow: hidden;
 
     /* Landing Page */
     #landing{
         width: 100%;
         height: 200%;
+        float: left;
         margin-top: -450px;
         .menu{
             width: 100%;
@@ -44,7 +109,8 @@ body,html{
                     padding: 0;
                     a{
                         display: block;
-                        font-size: 1.8em;
+                        font-size: 22px;
+                        line-height: 18px;
                         color: white;
                         font-family: 'haymakerregular';
                         text-decoration: none;
@@ -62,41 +128,112 @@ body,html{
             height: 50%;
             margin: 0;
             padding: 0;
-
-            /* Button */
-            .exit{
-                position: absolute;
-                top: 31px;
-                left: 31px;
-                font: 1.25em 'haymakerregular';
-                color: #e1d0a5;
-                background: black;
-                border-radius: 40px;
-                border: none;
-                box-shadow: none;
-                text-shadow: none;
-                outline: none;
-                background: none;
-                z-index: 2;
-                &:hover{
-                    cursor: pointer;
-                }
-            }
         }
 
         /* Video Overlay */
         .overlay{
-            background: url('../img/overlay-bg.png') repeat;
-            z-index: 1;
-            .theatre{
-                width: 690px;
-                height: 388px;
-                overflow: hidden;
-                margin: 31px;
-                float: right;
-                #frame{
-                    margin-top: -65px;
+            background: black;
+            .left{
+                width: 120px;
+                height: 450px;
+                margin: 0;
+                padding: 0;
+                left: 0;
+                float: left;
+                ul{
+                    width: 120px;
+                    height: 290px;
+                    overflow: hidden;
+                    margin: 162px 0 0 0;
+                    list-style: none;
+                    li{
+                        display: block;
+                        width: 120px;
+                        height: 70px;
+                        margin: 2px 0 0 0;
+                        overflow: hidden;
+                        button, a{
+                            width: 100%;
+                            height: 70px;
+                            display: block;
+                            padding: 20px 0;
+                            color: #e1d0a5;
+                            font-size: 13px;
+                            line-height: 18px;
+                            text-align: center;
+                            background: #222;
+                            text-decoration: none;
+                            &:hover{
+                                color: black;
+                                background: #e1d0a5;
+                            }
+                        }
+                    }
                 }
+                .btn{
+                    display: block;
+                    width: 100%;
+                    padding: 15px 0;
+                    line-height: 18px;
+                    text-align: center;
+                    color: #e1d0a5;
+                }
+                .close{
+                    position: absolute;
+                    top: 20px;
+                    left: 15px;
+                    width: 100%;
+                    height: 30px;
+                    margin: 0;
+                    padding: 0;
+                    color: #e1d0a5;
+                    text-align: left;
+                    span{
+                        display: inline-block;
+                        margin: 0 10px 0 0;
+                        width: 24px;
+                        font-size: 1.15em;
+                        height: 24px;
+                        text-align: center;
+                        line-height: 23px!important;
+                        border: 1px solid #e1d0a5;
+                        border-radius: 30px;
+                    }
+                }
+                // .select{
+                //     width: 100%;
+                //     padding: 15px 15px 10px 15px;
+                //     font-size: .85em;
+                //     line-height: 18px;
+                //     text-align: left;
+                //     &:hover{
+                //         color: black;
+                //         background: #e1d0a5;
+                //     }
+                // }
+                // .vid1{
+                //     margin-top: 70px;
+                //     border-top: 1px solid #222;
+                // }
+                // .active{
+                //     display: block;
+                //     color: black;
+                //     background: #e1d0a5;
+                // }
+            }
+            .theatre{
+                width: 800px;
+                height: 450px;
+                overflow: hidden;
+                margin: 0 auto;
+                float: left;
+                #frame{
+                    opacity: 0;
+                }
+            }
+            #vd1,
+            #vid2{
+                display: none;
             }
         }
     }
